@@ -64,7 +64,8 @@
                 <div class="mb-4">
                     <input id="userName" type="text" placeholder="Nama" class="w-full px-4 py-2 border rounded-lg mb-2" required>
                     <input id="userEmail" type="email" placeholder="Email" class="w-full px-4 py-2 border rounded-lg mb-2" required>
-                    <input id="userPhone" type="tel" placeholder="Nomor Telepon" class="w-full px-4 py-2 border rounded-lg" required>
+                    <input id="userPhone" type="tel" placeholder="Nomor Telepon" class="w-full px-4 py-2 border rounded-lg mb-2" required>
+                    <input id="userAddress" type="text" placeholder="Alamat" class="w-full px-4 py-2 border rounded-lg" required>
                 </div>
                 <button id="checkoutButton" class="w-full px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">Checkout</button>
             </div>
@@ -109,15 +110,16 @@
             const name = document.getElementById('userName').value;
             const email = document.getElementById('userEmail').value;
             const phone = document.getElementById('userPhone').value;
+            const address = document.getElementById('userAddress').value;
 
-            if (!name || !email || !phone) {
+            if (!name || !email || !phone || !address) {
                 alert('Harap lengkapi semua field.');
                 return;
             }
 
             const cartDetails = cartItems.map(item => `- ${item.name} (x${item.quantity}): Rp. ${(item.price * item.quantity).toLocaleString()}`).join('\n');
             const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-            const message = `Nama: ${name}\nEmail: ${email}\nNomor Telepon: ${phone}\n\nKeranjang:\n${cartDetails}\n\nTotal Harga: Rp. ${totalPrice.toLocaleString()}`;
+            const message = `Nama: ${name}\nEmail: ${email}\nNomor Telepon: ${phone}\nAlamat: ${address}\n\nKeranjang:\n${cartDetails}\n\nTotal Harga: Rp. ${totalPrice.toLocaleString()}`;
 
             const whatsappUrl = `https://wa.me/6285860602948?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
