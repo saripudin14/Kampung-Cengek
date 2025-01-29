@@ -25,6 +25,7 @@ class ProductController extends Controller
     $request->validate([
         'nama' => 'required|string|max:255',
         'harga' => 'required|string',
+        'stok' => 'required|string',
         'deskripsi' => 'nullable|string',
         'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
     ]);
@@ -38,6 +39,7 @@ class ProductController extends Controller
         'nama' => $request->nama,
         'harga' => (float) $harga,
         'deskripsi' => $request->deskripsi,
+        'stok' => $request->stok, // Perbaikan sintaks pada akses stok
         'foto' => $request->file('foto')->store('images', 'public'),
     ]);
 
@@ -54,6 +56,7 @@ public function update(Request $request, Product $product)
     $request->validate([
         'nama' => 'required|string|max:255',
         'harga' => 'required|string',
+        'stok' => 'required|string',
         'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'deskripsi' => 'nullable|string',
     ]);
@@ -64,6 +67,7 @@ public function update(Request $request, Product $product)
 
     $product->nama = $request->nama;
     $product->harga = (float) $harga;
+    $product->stok = $request->stok;
     $product->deskripsi = $request->deskripsi;
 
     if ($request->hasFile('foto')) {

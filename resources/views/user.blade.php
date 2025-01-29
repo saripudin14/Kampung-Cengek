@@ -30,6 +30,7 @@
                             <div class="my-2">
                                 <p class="text-xl"> {{ $product->nama }} </p>
                                 <p class="font-semibold text-gray-500"> Rp. {{ number_format($product->harga) }} </p>
+                                <p class="text-gray-600">Stok: {{ $product->stok }} KG</p> <!-- Tambahan stok -->
                             </div>
                             <a href="{{ route('products.edit', $product) }}">
                                 <button

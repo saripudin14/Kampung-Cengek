@@ -56,6 +56,14 @@
                                 <x-input-error :messages="$errors->get('harga')" class="mt-2" />
                             </div>
 
+                            <!-- Stok -->
+                            <div class="mb-4">
+                                <x-input-label for="stok" :value="__('Stok Produk')" />
+                                <x-text-input id="stok" class="block mt-1 w-full" type="number" name="stok"
+                                    :value="old('stok')" min="0" />
+                                <x-input-error :messages="$errors->get('stok')" class="mt-2" />
+                            </div>
+
                             <!-- Submit Button -->
                             <div class="flex justify-end mt-6">
                                 <x-primary-button class="py-3 px-6">

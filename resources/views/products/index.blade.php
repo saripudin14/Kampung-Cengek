@@ -24,6 +24,8 @@
                             <div class="my-2">
                                 <p class="text-xl">{{ $product->nama }}</p>
                                 <p class="font-semibold text-gray-500">Rp. {{ number_format($product->harga) }}</p>
+                                <p class="text-gray-600">Stok: {{ $product->stok }} KG</p> <!-- Tambahan stok -->
+
                             </div>
                             <button
                                 class="add-to-cart flex items-center justify-center gap-2 px-6 py-3 text-white bg-yellow-500 rounded-lg shadow-lg hover:bg-yellow-600 active:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-300 transition-all"
@@ -62,12 +64,17 @@
                 <p id="totalQuantity" class="text-gray-700 font-semibold mb-2">Jumlah Barang: 0</p>
                 <p id="totalPrice" class="text-gray-700 font-semibold mb-2">Total Harga: Rp. 0</p>
                 <div class="mb-4">
-                    <input id="userName" type="text" placeholder="Nama" class="w-full px-4 py-2 border rounded-lg mb-2" required>
-                    <input id="userEmail" type="email" placeholder="Email" class="w-full px-4 py-2 border rounded-lg mb-2" required>
-                    <input id="userPhone" type="tel" placeholder="Nomor Telepon" class="w-full px-4 py-2 border rounded-lg mb-2" required>
-                    <input id="userAddress" type="text" placeholder="Alamat" class="w-full px-4 py-2 border rounded-lg" required>
+                    <input id="userName" type="text" placeholder="Nama" class="w-full px-4 py-2 border rounded-lg mb-2"
+                        required>
+                    <input id="userEmail" type="email" placeholder="Email"
+                        class="w-full px-4 py-2 border rounded-lg mb-2" required>
+                    <input id="userPhone" type="tel" placeholder="Nomor Telepon"
+                        class="w-full px-4 py-2 border rounded-lg mb-2" required>
+                    <input id="userAddress" type="text" placeholder="Alamat" class="w-full px-4 py-2 border rounded-lg"
+                        required>
                 </div>
-                <button id="checkoutButton" class="w-full px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">Checkout</button>
+                <button id="checkoutButton"
+                    class="w-full px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">Checkout</button>
             </div>
         </div>
     </div>
