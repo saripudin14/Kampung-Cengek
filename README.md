@@ -1,4 +1,4 @@
-#Kampung Cengek
+# Kampung Cengek
 Tugas Pemograman 1
 
 Pendahuluan:
@@ -6,12 +6,12 @@ Proyek ini bertujuan untuk membangun sebuah website bernama "Kampung Cengek" men
 
 Tujuan Pengembangan:
 1. Menyediakan Informasi
-2. 2. Menampilkan profil, dan potensi Kampung Cengek.
-3. 3. Menyajikan kegiatan di kampung.
+2. Menampilkan profil, dan potensi Kampung Cengek.
+3. Menyajikan kegiatan di kampung.
 
 Mempromosikan Produk Lokal:
 1. Menampilkan daftar produk hasil UMKM atau pertanian lokal.
-2. 2. Menyediakan fitur katalog produk dengan deskripsi dan harga.
+2. Menyediakan fitur katalog produk dengan deskripsi dan harga.
 
 Fitur Utama:
 1. Halaman Beranda: Tampilan utama yang menarik dengan informasi singkat tentang Kampung Cengek.
